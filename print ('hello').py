@@ -121,3 +121,4 @@ files = list(Path("/Users/paulkonopka/Documents/Uni").iterdir())
 print(files)
 folder = Path("images")
 x = 5
+y = 120
