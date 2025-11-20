@@ -1,0 +1,12 @@
+#key: value
+#parent:
+  #child: value
+
+webscrapper:
+  #url: "https://www.energy-charts.info/charts/price_spot_market/chart.htm?c=DE&l=de&interval=year&legendItems=5w3wa"
+  url: "https://de.wikipedia.org/wiki/Liste_der_Formel-1-Weltmeister"
+  #url: "https://de.wikipedia.org/wiki/Fu%C3%9Fball-Weltmeisterschaft"
+  output_file: "world_cup_data.csv"
+  headers: 
+    User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    Accept-Language: "de-DE,de;q=0.9,en;q=0.8"
