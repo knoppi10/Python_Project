@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd 
 #pip install matplotlib
 #import matplotlib as matplotlib
-from bs4 import BeautifulSoup as soup
+from bs4 import BeautifulSoup
 import requests
 
 #pip install pyyaml
@@ -35,3 +35,15 @@ print (len (table_all))
 
 print (table.find_all("tr"))
 
+rows = table.find_all("tr")
+data = []
+for row in rows:
+    cols = row.find_all("td")
+    cols = [td.text.strip() for td in cols]
+    data.append(cols)
+#umwandeln in dataframe = Tabellenform
+    df = pd.DataFrame(data)
+    header = df.iloc
+    df = df[1:]
+    df.columns = header
+    print (df)
