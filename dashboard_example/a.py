@@ -1,7 +1,8 @@
-import dash                              # pip install dash
-import dash_html_components as html
-import dash_core_components as dcc
-from dash.dependencies import Output, Input
+#install required packages: pip install -r requirements.txt
+#aber davor muss man im Order sein im Terminal
+
+import dash
+from dash import html, dcc, Input, Output
 
 from dash_extensions import Lottie       # pip install dash-extensions
 import dash_bootstrap_components as dbc  # pip install dash-bootstrap-components
@@ -16,7 +17,8 @@ from wordcloud import WordCloud          # pip install wordcloud
 # Create a Dash object
 # Flask: app = Flask(__name__)
 # __name__ (default setting)
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUX])
+
 
 # if Jupyter Notebook/Colab
 # app = JupyterDash(__name__, external_stylesheets=[dbc.themes.LUX])
@@ -31,6 +33,8 @@ dbc stands for Dash Bootstrap Components
 
 
 
+
+# for the class
 """
 mb-2 = margin-bottom: spacing * 2
 mt-2 = margin-top: spacing * 2
@@ -39,12 +43,19 @@ r / e	right / end
 x	left + right
 y	top + bottom
 """
+#Strukturell aufgebaut
+# Row
+# Columne
+# Card
+# CardBody
+#Einfach einklappen um einen guten überblick zu bekommen
+
 
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col([
             dbc.Card([
-                dbc.CardImg(src='/assets/linkedin.png')
+                dbc.CardImg(src='/assets/csm_leopard-massai-mara-kenia-WW22416-c-naturepl-com-Anup-Shah-WWF_4fdf11c7b9.jpg')
             ],className='mb-2'), 
             # margin bottom 2 space,  0.5rem (8px) margin
             # link: https://hackerthemes.com/bootstrap-cheatsheet/
@@ -92,7 +103,7 @@ app.layout = dbc.Container([
                 ])
             ]),
         ], width=2),
-    ],className='mb-2'),
+    ],className='mb-2'), # Mow much spaache between components
     dbc.Row([
         dbc.Col([
             dbc.Card([
@@ -136,7 +147,9 @@ app.layout = dbc.Container([
 
 if __name__=='__main__':
 # you can change the port number here
-    app.run_server(debug=False, port=8001)  # Starts the server only if run directly.
+    app.run(debug=False, port=8002)  # Starts the server only if run directly.
+    #öffnen online: 127.0.0.1/:8001
+    #127.0.0.1:8001
     
     
 # if jupyter notebook/colab
