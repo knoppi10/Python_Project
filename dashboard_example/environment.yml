@@ -1,0 +1,7 @@
+name: dashboard_python_seminar
+channels:
+  - defaults
+dependencies:
+  - python=3.11.14
+  - ipykernel
+prefix: /opt/miniconda3/envs/dashboard_python_seminar

@@ -75,8 +75,7 @@ app.layout = dbc.Container([
     dbc.Row([
         dbc.Col([
             dbc.Card([
-                dbc.CardBody([
-                ])
+                dbc.CardImg(src='/assets/csm_leopard-massai-mara-kenia-WW22416-c-naturepl-com-Anup-Shah-WWF_4fdf11c7b9.jpg')
             ]),
         ], width=2),
         dbc.Col([

@@ -2,7 +2,6 @@
 # conda activate gradio_env
 # pip install gradio pandas plotly wordcloud
 
-
 import pandas as pd
 import calendar
 from datetime import date
@@ -161,8 +160,8 @@ def update_dashboard(start_date_str, end_date_str):
 
 # Gradio UI
 
-# app.layout = ...
-# Bloacks -> container
+# app.layout = ... -> we dont need this
+# Bloacks -> container -> neither use this
 with gr.Blocks() as demo:
     gr.Markdown("## LinkedIn Analytics Dashboard (Gradio)")
     
@@ -195,6 +194,8 @@ with gr.Blocks() as demo:
         pie_plot = gr.Plot(label="Messages sent vs received")
         wc_plot = gr.Plot(label="Wordcloud (Position)")
 
+    #Display or design of your dashboard
+    #======================================
     start_date_dd.change(
         fn=update_dashboard,
         inputs=[start_date_dd, end_date_dd],

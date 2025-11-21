@@ -13,12 +13,12 @@ from wordcloud import WordCloud          # pip install wordcloud
 
 
 # Config/Lottie
-url_coonections = "https://assets9.lottiefiles.com/private_files/lf30_5ttqPi.json"
+url_coonections = "https://assets9.lottiefiles.com/private_files/lf30_5ttqPi.json" #URLs of the lotties
 url_companies = "https://assets9.lottiefiles.com/packages/lf20_EzPrWM.json"
 url_msg_in = "https://assets9.lottiefiles.com/packages/lf20_8wREpI.json"
 url_msg_out = "https://assets2.lottiefiles.com/packages/lf20_Cc8Bpg.json"
 url_reactions = "https://assets2.lottiefiles.com/packages/lf20_nKwET0.json"
-options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRatio='xMidYMid slice'))
+options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRatio='xMidYMid slice')) #how should the lottie behave
 
 """
 xMidYMid: Keeps the image centered horizontally and vertically.
@@ -27,7 +27,7 @@ slice: Trims the animation according to the container size to ensure it fills th
 
 
 # Bootstrap themes: https://hellodash.pythonanywhere.com/theme_explorer
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUX])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUX]) #going to create a Dashboard __name__
 
 app.layout = dbc.Container([
     dbc.Row([
@@ -38,7 +38,7 @@ app.layout = dbc.Container([
                 ], className='mb-2'),  # Card for the image
                 dbc.Card([
                     dbc.CardBody([
-                        dbc.CardLink("Moodle", target="_blank",
+                        dbc.CardLink("Moodle", target="_blank", #Verlinkung
                                      href="https://www.moodle.tum.de/login/index.php"
                         )
                     ])
@@ -49,9 +49,9 @@ app.layout = dbc.Container([
             dbc.Card([
                 dbc.CardBody([
                     dcc.DatePickerSingle(
-                        id='my-date-picker-start',
-                        date=date(2018, 1, 1),
-                        className='ml-5'
+                        id='my-date-picker-start', #varliable name
+                        date=date(2018, 1, 1), #default date
+                        className='ml-5' #margin left 5 space
                     ),
                     
                     # https://dash.plotly.com/dash-core-components/datepickerrange 

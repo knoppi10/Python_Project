@@ -24,7 +24,8 @@ options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRat
 df_cnt = pd.read_csv("data/Connections.csv")
 df_cnt["Connected On"] = pd.to_datetime(df_cnt["Connected On"],format="%d-%b-%y")
 df_cnt["month"] = df_cnt["Connected On"].dt.month
-df_cnt['month'] = df_cnt['month'].apply(lambda x: calendar.month_abbr[x])
+df_cnt['month'] = df_cnt['month'].apply(lambda x: calendar.month_abbr[x]) #apply the function to each element, this fuction is only used when using this apply
+#apply(lambda x: x+2)
 # 1 -> Jan, 2 -> Feb
 # dt.month_name().str(3)
 
@@ -206,7 +207,7 @@ def update_small_cards(start_date, end_date):
     Input('my-date-picker-start', 'date'),
     Input('my-date-picker-end', 'date'),
 )
-def update_line(start_date, end_date):
+def update_line(start_date, end_date): 
     dff = df_cnt.copy()
     
     # Step 1: Filter data within the specified date range
